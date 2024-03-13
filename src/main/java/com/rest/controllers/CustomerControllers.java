@@ -1,5 +1,6 @@
 package com.rest.controllers;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,11 @@ public class CustomerControllers {
 	@PutMapping
 	public Customer updateCustomerDetails(@RequestBody Customer customer) {
 		return service.updateCustomerDetails(customer);
+	}
+	
+// find user by name
+	public List<String> getByName(String name){
+		return Arrays.asList("Vikram","JTC");
 	}
 }
 
